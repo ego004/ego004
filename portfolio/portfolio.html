@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Selected Work</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #16181d;
+    --ink-2: #464b55;
+    --ink-3: #7a808b;
+    --rule: #e3e1dc;
+    --paper: #ffffff;
+    --tint: #f6f5f1;
+    --accent: #1f5f4a;
+    --accent-2: #c2410c;
+    --mono: "JetBrains Mono", ui-monospace, monospace;
+  }
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink);
+    font-family: Inter, -apple-system, Segoe UI, sans-serif; font-size: 9.6pt; line-height: 1.5;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { width: 210mm; height: 297mm; padding: 16mm 17mm 14mm; position: relative; overflow: hidden;
+    page-break-after: always; break-after: page; display: flex; flex-direction: column; }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+  .folio { position: absolute; bottom: 8mm; left: 17mm; right: 17mm; display: flex; justify-content: space-between;
+    font-size: 7.5pt; color: var(--ink-3); letter-spacing: .02em; }
+  h1, h2, h3 { font-family: Newsreader, Georgia, serif; font-weight: 500; margin: 0; letter-spacing: -.01em; }
+  h2 { font-size: 23pt; line-height: 1.1; }
+  h3 { font-size: 12.5pt; margin: 0 0 1.5mm; }
+  p { margin: 0 0 2.4mm; }
+  .eyebrow { font-size: 7.6pt; text-transform: uppercase; letter-spacing: .12em; color: var(--accent); font-weight: 600; margin-bottom: 2mm; }
+  .lede { font-size: 11pt; color: var(--ink-2); margin: 2.5mm 0 4mm; max-width: 158mm; }
+  .tags { display: flex; flex-wrap: wrap; gap: 1.4mm; margin: 0 0 4mm; }
+  .tags span { font-size: 7.4pt; border: 1px solid var(--rule); border-radius: 10px; padding: .4mm 2.2mm; color: var(--ink-2); background: #fff; }
+  figure { margin: 0; }
+  figure img { display: block; width: 100%; border-radius: 2.5mm; border: 1px solid var(--rule); }
+  figcaption { font-size: 7.6pt; color: var(--ink-3); margin-top: 1.3mm; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 7mm; }
+  .cols-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6mm; }
+  .cols-60 { display: grid; grid-template-columns: 1.35fr 1fr; gap: 7mm; }
+  ul { margin: 0 0 2.4mm; padding-left: 4mm; }
+  li { margin-bottom: 1.2mm; }
+  li::marker { color: var(--ink-3); }
+  b, strong { font-weight: 600; }
+  .demo { background: var(--tint); border-radius: 2.5mm; padding: 3.5mm 4.5mm; margin-top: auto; }
+  .demo .eyebrow { margin-bottom: 1.2mm; color: var(--ink-2); }
+  .demo p:last-child { margin-bottom: 0; }
+  code, .mono { font-family: var(--mono); font-size: 8pt; }
+  pre { font-family: var(--mono); font-size: 7.2pt; line-height: 1.45; background: #15171c; color: #dfe3ea;
+    border-radius: 2.5mm; padding: 3.5mm 4mm; margin: 0; white-space: pre-wrap; }
+  pre .ok { color: #7ee2a8; } pre .dim { color: #8a919e; } pre .warn { color: #ffb38a; }
+  .stat-row { display: flex; gap: 6mm; margin: 0 0 4mm; }
+  .stat { flex: 1; border-top: 1.5px solid var(--ink); padding-top: 1.6mm; }
+  .stat .n { font-family: Newsreader, Georgia, serif; font-size: 19pt; line-height: 1; }
+  .stat .l { font-size: 7.6pt; color: var(--ink-2); margin-top: 1mm; }
+  table { width: 100%; border-collapse: collapse; font-size: 8.6pt; }
+  th { text-align: left; font-weight: 600; font-size: 7.6pt; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-3);
+    border-bottom: 1.5px solid var(--ink); padding: 0 3mm 1.6mm 0; }
+  td { border-bottom: 1px solid var(--rule); padding: 2.2mm 3mm 2.2mm 0; vertical-align: top; }
+  td:first-child { font-weight: 600; width: 46mm; }
+  .phones { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; }
+  .phones img { border-radius: 3mm; }
+  .note { font-size: 7.8pt; color: var(--ink-3); }
+  .small h3 { font-size: 11pt; }
+  .small p { font-size: 8.6pt; color: var(--ink-2); margin-bottom: 1.4mm; }
+  .small .tags { margin-bottom: 0; }
+  .small .tags span { font-size: 6.8pt; }
+  .card { border-top: 1px solid var(--rule); padding-top: 3mm; }
+  /* cover */
+  .cover { padding: 26mm 20mm 18mm; justify-content: space-between; }
+  .cover h1 { font-size: 46pt; line-height: 1.0; letter-spacing: -.02em; }
+  .cover .sub { font-size: 13pt; color: var(--ink-2); margin-top: 6mm; max-width: 140mm; font-family: Newsreader, Georgia, serif; }
+  .toc { border-top: 1.5px solid var(--ink); }
+  .toc div { display: grid; grid-template-columns: 10mm 1fr auto; padding: 2.4mm 0; border-bottom: 1px solid var(--rule); font-size: 9.6pt; }
+  .toc .k { color: var(--ink-3); font-variant-numeric: tabular-nums; }
+  .toc .t { color: var(--ink-2); font-size: 8.4pt; }
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<section class="page cover">
+  <div>
+    <div class="eyebrow">Portfolio · 2026</div>
+    <h1>Selected work</h1>
+    <p class="sub">Shipped cross-platform apps, real-time and location-aware systems, and applied AI. Each public project below can be shown running, from a demo path in its repository.</p>
+  </div>
+  <div class="toc">
+    <div><span class="k">01</span><span>NoNonsenseMusic: native Mac, Android and Windows apps with a self-hosted server</span><span class="t">shipped, v0.3.1</span></div>
+    <div><span class="k">02</span><span>Arya: multi-camera face recognition for unique-visitor counting</span><span class="t">computer vision</span></div>
+    <div><span class="k">03</span><span>Citizen complaints platform: OTP, GPS, evidence uploads, officer back office</span><span class="t">backend</span></div>
+    <div><span class="k">04</span><span>SonicNet: SOS relay over a phone-to-phone mesh, with GPS and triage</span><span class="t">real-time, location</span></div>
+    <div><span class="k">05</span><span>Production AI work: document extraction, agentic ETL, learning agents</span><span class="t">LLM systems</span></div>
+    <div><span class="k">06</span><span>Unvelit moderation: image, video and text screening with dedup in SQL</span><span class="t">trust &amp; safety</span></div>
+    <div><span class="k">07</span><span>BrightWords: AI English tutor for children, with a parent view</span><span class="t">web app + LLM</span></div>
+    <div><span class="k">08</span><span>Conversational AI: lead capture over web, WhatsApp and voice</span><span class="t">RAG, agents</span></div>
+    <div><span class="k">09</span><span>Smaller builds and experiments</span><span class="t"></span></div>
+  </div>
+  <div class="note">Sample people in demos are synthetic (GAN-generated faces) or fictional. Screens are from running builds.</div>
+</section>
+
+<!-- ============ MAPPING ============ -->
+<section class="page">
+  <div class="eyebrow">For a healthcare on-demand app</div>
+  <h2>Where each part has been built before</h2>
+  <p class="lede">A Practo- or Uber-style healthcare product is a set of familiar parts: patient and provider apps, verified accounts, location, live status, an operations console, documents, and AI on top. This is where each part already exists in the work that follows.</p>
+  <table>
+    <tr><th>Capability</th><th>Built in</th></tr>
+    <tr><td>Patient and provider apps on phone and desktop</td><td><b>NoNonsenseMusic</b>: a native SwiftUI Mac app and a Flutter app for Android and Windows from one codebase, released, with offline downloads, background playback, lock-screen controls and a home-screen widget.</td></tr>
+    <tr><td>Verified sign-up, sessions, roles</td><td><b>Complaints platform</b>: phone OTP with attempt limits and single-use action tokens, JWT access and rotating refresh tokens, citizen and officer roles. <b>NoNonsenseMusic</b>: multi-user accounts with recovery codes.</td></tr>
+    <tr><td>Location on every request</td><td><b>Complaints platform</b>: GPS stored on logins, complaints and each evidence file. <b>SonicNet</b>: GPS fix and place description on each SOS, carried hop to hop.</td></tr>
+    <tr><td>Live status and real-time rooms</td><td><b>NoNonsenseMusic</b>: Jams, where several devices share one queue and play in sync, with the server as the source of truth. <b>SonicNet</b>: a command centre that receives SOS calls live over WebSocket.</td></tr>
+    <tr><td>Dispatch and triage console</td><td><b>SonicNet</b>: urgency from type and message, acknowledge flow, route of each call. <b>Complaints platform</b>: officer dashboard, pending queue, status changes with an audit log.</td></tr>
+    <tr><td>Reports, prescriptions, photos</td><td><b>Complaints platform</b>: image and video evidence, type and size checks, compression, per-complaint storage. <b>Unvelit</b>: automated screening of every upload.</td></tr>
+    <tr><td>Notifications and follow-up</td><td><b>NoNonsenseMusic</b>: friend requests, shares and invites as live notifications. <b>Lead platforms</b>: email and WhatsApp follow-up sequences that pause when the person replies.</td></tr>
+    <tr><td>AI assistants and triage</td><td><b>Lead platforms</b>: RAG chatbots on web and WhatsApp with human handoff. <b>Production AI</b>: source-grounded extraction from long documents. <b>BrightWords</b>: spoken-answer scoring.</td></tr>
+    <tr><td>Identity and computer vision</td><td><b>Arya</b>: face detection, embeddings and matching across cameras, sized for a 300,000-person event.</td></tr>
+    <tr><td>Security and privacy</td><td>Rate limiting, input sanitisation, security headers and audit trails (complaints platform); no telemetry and no IP or search logging (NoNonsenseMusic).</td></tr>
+  </table>
+  <div class="folio"><span>Selected work</span><span>2</span></div>
+</section>
+
+<!-- ============ 01 NNM ============ -->
+<section class="page">
+  <div class="eyebrow">01 · Shipped product</div>
+  <h2>NoNonsenseMusic</h2>
+  <p class="lede">A music player with native apps for macOS, Android and Windows and a server that a group of friends can share. Open source, released (v0.3.1), and in daily use by its author.</p>
+  <div class="tags"><span>Swift 6 · SwiftUI</span><span>Flutter 3 · Dart</span><span>Python 3.13 · FastAPI</span><span>PostgreSQL</span><span>WebSockets</span><span>AGPL-3.0</span></div>
+  <figure><img src="img/home.jpg"><figcaption>Mac app, home. The window takes its colours from the current cover; ~0.3% CPU when idle.</figcaption></figure>
+  <div class="stat-row" style="margin-top:5mm">
+    <div class="stat"><div class="n">3</div><div class="l">platforms from two client codebases</div></div>
+    <div class="stat"><div class="n">55k</div><div class="l">lines across Mac, Flutter, server and tests</div></div>
+    <div class="stat"><div class="n">576</div><div class="l">server tests passing</div></div>
+    <div class="stat"><div class="n">8</div><div class="l">public releases</div></div>
+  </div>
+  <div class="cols">
+    <div>
+      <h3>What it does</h3>
+      <ul>
+        <li>One search across JioSaavn, YouTube Music and YouTube; the same recording from several sources is shown once and the best copy plays.</li>
+        <li>Shared and public playlists, friends, and notifications.</li>
+        <li><b>Jams</b>: friends listen together on their own devices, in step, from one shared queue.</li>
+        <li>Timed lyrics with line-by-line translation, on-device on the Mac.</li>
+        <li>Offline downloads, prefetching of the next song, autoplay.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Engineering</h3>
+      <ul>
+        <li>Jam rules are written once (<span class="mono">docs/jam.md</span>) and implemented in all three codebases, with the server as the only source of truth and a shared playhead model.</li>
+        <li>Rooms survive server restarts: written on shutdown, resumed if back within 60 s.</li>
+        <li>Numbered SQL migrations; argon2 passwords; per-user rate limits behind a trusted proxy.</li>
+        <li>Privacy by design: no telemetry, no IP or search logs; YouTube lookups run on the user's device.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="folio"><span>NoNonsenseMusic · github.com/ego004/NoNonsenseMusic</span><span>3</span></div>
+</section>
+
+<section class="page">
+  <div class="cols" style="margin-bottom:5mm">
+    <figure><img src="img/lyrics.jpg"><figcaption>Timed lyrics with translation (Punjabi to English).</figcaption></figure>
+    <figure><img src="img/friends.jpg"><figcaption>Friends, shared playlists and invitations.</figcaption></figure>
+  </div>
+  <div class="phones" style="margin-bottom:5mm">
+    <figure><img src="img/phone-home.jpg"></figure>
+    <figure><img src="img/phone-search.jpg"></figure>
+    <figure><img src="img/phone-playing.jpg"></figure>
+    <figure><img src="img/phone-library.jpg"></figure>
+  </div>
+  <p class="note" style="margin-top:-3mm">Android app (Flutter): home, search, now playing, library. Background playback with lock-screen controls and a home-screen widget.</p>
+  <div class="demo">
+    <div class="eyebrow">Demo path</div>
+    <p>Install the Mac, Windows or Android build from the latest GitHub release, point it at a server (<span class="mono">uv run fastapi run src/music_backend/main.py</span> with PostgreSQL), sign up two accounts and start a Jam: both devices play the same queue in step. Built with two contributors, credited in the README (Windows app and phone redesign).</p>
+  </div>
+  <div class="folio"><span>NoNonsenseMusic</span><span>4</span></div>
+</section>
+
+<!-- ============ 02 ARYA ============ -->
+<section class="page">
+  <div class="eyebrow">02 · Computer vision</div>
+  <h2>Arya: unique-visitor counting</h2>
+  <p class="lede">Counts how many different people passed through an event from the footage of several cameras over several days. Built for a three-day event with more than 300,000 expected attendees.</p>
+  <div class="tags"><span>PyTorch</span><span>MTCNN</span><span>FaceNet (InceptionResnetV1, VGGFace2)</span><span>ChromaDB · HNSW · cosine</span><span>OpenCV</span></div>
+  <figure><img src="img/arya_strip.jpg"><figcaption>Annotated frames from the demo run. Green: face embedded and matched against the store. Orange: same person already tracked, so FaceNet is skipped. Labels: track, decision, detection confidence, visitor ID.</figcaption></figure>
+  <div style="margin-top:4mm"><div class="stat-row" style="margin:0">
+      <div class="stat"><div class="n">14 / 14</div><div class="l">people counted exactly once across 3 cameras and 2 days (20 appearances)</div></div>
+      <div class="stat"><div class="n">0</div><div class="l">people counted twice or merged with someone else</div></div>
+      <div class="stat"><div class="n">57%</div><div class="l">of face detections skipped by the tracker, never sent to FaceNet</div></div>
+    </div></div>
+  <div class="cols" style="margin-top:4mm">
+    <div>
+      <h3>Pipeline</h3>
+      <ul>
+        <li>MTCNN finds faces; small or low-confidence detections are dropped.</li>
+        <li>A light IOU tracker follows each face within a clip, so a person walking past is embedded once, or again only when a sharper view appears.</li>
+        <li>FaceNet turns each face into a 512-d embedding; ChromaDB (HNSW, cosine) finds the nearest known visitor across all cameras and days.</li>
+        <li>Known visitors keep a quality-weighted running average of their embeddings, which gets more robust with each sighting.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Built for a long, large run</h3>
+      <ul>
+        <li>Checkpoints every 100 processed frames; a stopped run resumes where it left off.</li>
+        <li>Persistent vector store, so later days match against earlier ones.</li>
+        <li>Exports per-visitor records (first seen, cameras) to CSV and JSON.</li>
+        <li>Batch embedding on GPU; frame sampling configurable per deployment.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="demo">
+    <div class="eyebrow">Demo path</div>
+    <p><span class="mono">demo/run_demo.sh</span> renders three camera clips of synthetic people walking past (with overlap between gates and returning visitors), runs the pipeline and checks the count against the known answer. Drop real footage in <span class="mono">videos/</span> and run <span class="mono">python main.py</span> for the real thing.</p>
+  </div>
+  <div class="folio"><span>Arya · github.com/ego004/aryaFaceRecognition</span><span>5</span></div>
+</section>
+
+<!-- ============ 03 POLICE ============ -->
+<section class="page">
+  <div class="eyebrow">03 · Citizen-facing platform</div>
+  <h2>Citizen complaints platform</h2>
+  <p class="lede">The backend for a police complaints app: citizens verify their phone, file complaints with location and evidence, and track them; officers triage them from an admin side. The same shape as a patient app with a clinic back office.</p>
+  <div class="tags"><span>FastAPI</span><span>Async SQLAlchemy</span><span>MySQL</span><span>JWT</span><span>Pillow</span><span>OpenAPI</span></div>
+  <div class="cols-60">
+    <div>
+      <h3>Citizen side</h3>
+      <ul>
+        <li>Phone OTP: 5-minute codes, 3 attempts, then a single-use action token to register or reset a password.</li>
+        <li>Login records GPS position, IP and device in a login log.</li>
+        <li>Complaints by type and category (validated pairs), free text, GPS, photos and video.</li>
+        <li>Evidence pipeline: type and size checks, EXIF orientation, resize and recompression, dated per-complaint storage.</li>
+      </ul>
+      <h3>Officer side</h3>
+      <ul>
+        <li>Dashboard by status and category with resolution rate; pending queue; user blocking; MIS report.</li>
+        <li>Every status change and note goes to an audit log.</li>
+      </ul>
+      <h3>Hardening</h3>
+      <ul>
+        <li>Rate limits on OTP, login and complaints; XSS, SQL and path-traversal checks; security headers; request audit logging.</li>
+        <li>Access tokens last 15 minutes; refresh tokens are hashed at rest and rotated on use.</li>
+      </ul>
+    </div>
+    <div>
+<pre><span class="dim">$ python scripts/demo_walkthrough.py</span>
+▶ Citizen asks for an OTP
+  HTTP 200 {"message": "OTP sent to 98******56", "expires_in": 300}
+▶ A wrong OTP is rejected
+  HTTP 400 {"detail": "Invalid OTP. 2 attempts remaining."}
+▶ Right OTP → single-use action token
+  HTTP 200 {"action_token": "DqE8Xtbu…", "expires_in": 300}
+▶ Register, then log in from GPS
+  HTTP 200 {"status": "success", "user": {"name": "Priya Raman", …}}
+▶ Mismatched type and category
+  HTTP 400 {"detail": "Category 'burglary' is not valid for complaint type 'cyber'"}
+▶ Burglary complaint + geotagged photo
+  HTTP 200 {"complaint_number": "CMP-2026-563983",
+            "latitude": "12.97598", "longitude": "80.22121",
+            "media_count": {"images": 1}}
+  <span class="ok">→ script tag stripped before storage</span>
+▶ Officer: dashboard, queue, accept with note
+  HTTP 200 {"status": "accepted", "admin_notes":
+            "FIR registered. SI Karthik assigned; site visit today 5 pm."}
+▶ Citizen sees the update
+▶ Someone else's complaint
+  HTTP 404 {"detail": "Complaint not found"}
+▶ OTP flood from one client
+  <span class="warn">status codes: [200, 200, 200, 200, 429, 429, 429]</span></pre>
+    </div>
+  </div>
+  <div class="demo">
+    <div class="eyebrow">Demo path</div>
+    <p>MySQL, <span class="mono">python scripts/init_db.py</span>, <span class="mono">python -m scripts.seed_admin</span>, <span class="mono">uvicorn app.main:app</span>, then <span class="mono">python scripts/demo_walkthrough.py</span> (output above). Every endpoint can be tried by hand at <span class="mono">/policeapp/docs</span>.</p>
+  </div>
+  <div class="folio"><span>Citizen complaints platform</span><span>6</span></div>
+</section>
+
+<!-- ============ 04 SONICNET ============ -->
+<section class="page">
+  <div class="eyebrow">04 · Real-time, location, offline</div>
+  <h2>SonicNet: SOS without a network</h2>
+  <p class="lede">Gets an emergency call (type, message, GPS fix, place) from a phone with no signal to a rescue command centre, by relaying it across nearby devices over Bluetooth LE discovery, Wi-Fi multicast or sound (data-over-audio), until one has an uplink.</p>
+  <div class="tags"><span>Python</span><span>UDP multicast</span><span>GGWave audio modem</span><span>BLE (bleak)</span><span>Flask-SocketIO</span><span>SQLite</span><span>HMAC</span></div>
+  <figure><img src="img/sonic_mesh.jpg"><figcaption>One run of the mesh demo: 24 devices, two with an uplink (green). Each coloured line is the route an SOS actually took to the server.</figcaption></figure>
+  <div class="cols" style="margin-top:4mm">
+    <div>
+      <h3>Relay protocol</h3>
+      <ul>
+        <li>Every packet has a SHA-256 identity hash. A device forwards an SOS at most once: in the run above each call was heard about 60 times but repeats were dropped (149 of 243).</li>
+        <li>Hop count with a cap, so packets cannot circulate.</li>
+        <li>Server first, relay second: a device with an uplink delivers and stops the flood.</li>
+        <li>The server stores a call once even when it arrives through several gateways.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Command centre</h3>
+      <ul>
+        <li>Calls arrive live over WebSocket, triaged by type and message keywords (medical, fire, disaster → critical).</li>
+        <li>Each call shows its location, relay count and route, and can be acknowledged.</li>
+        <li>Audio path: an HMAC-signed, chunked rescuer ↔ survivor status exchange over speaker and microphone, for devices with no radio at all.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="folio"><span>SonicNet · github.com/ego004/SonicNet</span><span>7</span></div>
+</section>
+
+<section class="page">
+  <figure><img src="img/sonic_dashboard.jpg"><figcaption>The command centre after the run: a woman in labour, a family trapped by a flood, a transformer fire and a cardiac case, each with its route through the mesh.</figcaption></figure>
+  <div class="demo" style="margin-top:5mm">
+    <div class="eyebrow">Demo path</div>
+    <p><span class="mono">python emergency_server.py</span>, then <span class="mono">python demo/mesh_sim.py</span>. The demo runs the project's real client (packet hashing, de-duplication, hop limit, relay decisions) on 24 simulated devices; only the radio is simulated, with 420 m range, jitter and 8% loss. The UDP and audio transports have their own laptop-to-laptop test scripts. Status: a working prototype, not yet a phone app; BLE is used for discovery, not yet for relaying.</p>
+  </div>
+  <div class="folio"><span>SonicNet</span><span>8</span></div>
+</section>
+
+<!-- ============ 05 PRO AI ============ -->
+<section class="page">
+  <div class="eyebrow">05 · Production AI (private repositories)</div>
+  <h2>LLM systems in production</h2>
+  <p class="lede">Most day-to-day work is in private client repositories, so there are no screenshots here. The architecture of each can be walked through in detail.</p>
+  <div class="cols" style="gap:9mm">
+    <div class="card">
+      <h3>Tender document extraction engine</h3>
+      <p>Turns tender bundles of 40+ pages into structured requirement data that can be checked against the source.</p>
+      <ul>
+        <li><b>Verbatim-quote grounding</b>: every extracted requirement carries the exact text it came from, so nothing is invented.</li>
+        <li><b>Amendment chains</b>: later corrigenda are reconciled against the original clauses.</li>
+        <li><b>~10× lower inference cost</b> than the first version.</li>
+      </ul>
+      <div class="tags"><span>LLMs</span><span>structured extraction</span><span>evaluation</span></div>
+    </div>
+    <div class="card">
+      <h3>Self-correcting agentic ETL (US startup)</h3>
+      <p>An ETL engine in which LLM agents transform inconsistent source files into one schema, check their own output and correct it before it is loaded.</p>
+      <div class="tags"><span>LLM agents</span><span>data pipelines</span></div>
+    </div>
+    <div class="card">
+      <h3>Agent pipelines for a learning platform</h3>
+      <p>Agent pipelines behind an online learning platform.</p>
+      <div class="tags"><span>LLM agents</span></div>
+    </div>
+    <div class="card">
+      <h3>Serenity (research)</h3>
+      <p>A long-running agent runtime: governed input, an append-only SQLite event journal with deterministic replay, bounded working memory, and live model calls whose outputs are validated before they may change state. About 88,000 lines of Python with 64 test modules.</p>
+      <div class="tags"><span>event sourcing</span><span>agent architecture</span><span>testing</span></div>
+    </div>
+  </div>
+  <div class="folio"><span>Production AI</span><span>9</span></div>
+</section>
+
+<!-- ============ 06 UNVELIT ============ -->
+<section class="page">
+  <div class="eyebrow">06 · Trust and safety</div>
+  <h2>Unvelit moderation service</h2>
+  <p class="lede">Every image, video and text post on Unvelit, an anonymous college forum, passes through this API before anyone sees it. Paid moderation costs money per call, so a repost of something already moderated is recognised and its verdict reused.</p>
+  <div class="tags"><span>FastAPI</span><span>MySQL</span><span>perceptual hashing</span><span>SightEngine</span><span>Gemini</span><span>OpenCV</span></div>
+  <div class="cols">
+    <div>
+      <h3>How it works</h3>
+      <ul>
+        <li>Images: a 64-bit perceptual hash per upload. Near-duplicate lookup is a single MySQL query, <span class="mono">BIT_COUNT(hash ^ ?) ≤ 8</span>: Hamming distance as a popcount, with no vector database.</li>
+        <li>Video: five sampled frames hashed and screened one by one; screening stops at the first frame that fails.</li>
+        <li>Text: Gemini moderation with conversation context.</li>
+        <li>Batch endpoints run concurrently; every decision and its reason go to an audit table.</li>
+      </ul>
+      <h3>Found and fixed while building the demo</h3>
+      <p>The first version used 16-bit hashes, where about 60% of unrelated images look alike, so a new upload could inherit some other image's "pass". Moving to 64-bit hashes took wrong matches from 4 in 9 to 0 in 9 with the same repost detection, and old rows migrate automatically.</p>
+    </div>
+    <div>
+<pre><span class="dim">$ python demo/dedup_demo.py</span>
+Stored as already moderated: 10 images
+(3 flagged, 7 passed)
+
+Reposts (should reuse the original verdict):
+  recompressed (JPEG q=35)  <span class="ok">10/10</span>  dist 0-2/64
+  downscaled to 40%         <span class="ok">10/10</span>  dist 0-2/64
+  brightened +25%           <span class="ok">10/10</span>  dist 0-6/64
+  cropped 6% off each side   <span class="warn">1/10</span>
+  watermark strip added      <span class="warn">3/10</span>
+  34/50 caught: 34 moderation calls saved
+
+Never-seen images (should not match):
+  9/9 no match, nearest 16-24/64 bits away
+
+Previous scheme (16-bit):
+  new images wrongly matched: <span class="warn">4/9</span>
+Current scheme:
+  new images wrongly matched: <span class="ok">0/9</span></pre>
+      <p class="note" style="margin-top:2mm">Perceptual hashes are built for re-encodes and resizes; crops need local features or embeddings, a natural next step.</p>
+    </div>
+  </div>
+  <div class="demo">
+    <div class="eyebrow">Demo path</div>
+    <p>MySQL, then <span class="mono">python demo/dedup_demo.py</span>: no API keys needed (output above). With SightEngine and Gemini keys, <span class="mono">uvicorn api:app</span> serves the full moderation API.</p>
+  </div>
+  <div class="folio"><span>Unvelit moderation · github.com/ego004/unvelit_moderation</span><span>10</span></div>
+</section>
+
+<!-- ============ 07 BRIGHTWORDS ============ -->
+<section class="page">
+  <div class="eyebrow">07 · Web app with an LLM</div>
+  <h2>BrightWords: English practice for children</h2>
+  <p class="lede">An English-learning web app for ages 6 to 21: conversation practice with an AI tutor, spoken answers scored on fluency, pronunciation, grammar and vocabulary, grammar correction, lessons and quizzes, and a summary view for parents and teachers.</p>
+  <div class="tags"><span>Next.js 16 · React 19</span><span>Tailwind · Radix</span><span>FastAPI</span><span>LangChain · Ollama</span><span>Postgres / SQLite</span><span>JWT</span></div>
+  <div class="cols" style="margin-bottom:5mm">
+    <figure><img src="img/eng_dashboard.jpg"><figcaption>Learner dashboard.</figcaption></figure>
+    <figure><img src="img/eng_speaking.jpg"><figcaption>Speaking practice: browser speech recognition, then an AI rubric score.</figcaption></figure>
+  </div>
+  <div class="cols">
+    <figure><img src="img/eng_lessons.jpg"><figcaption>Lessons by subject and level; difficulty presets by age band.</figcaption></figure>
+    <figure><img src="img/eng_parent.jpg"><figcaption>Parent and teacher summary, aggregated from the interaction history.</figcaption></figure>
+  </div>
+  <div class="demo">
+    <div class="eyebrow">Demo path</div>
+    <p><span class="mono">uvicorn app.main:app</span> in <span class="mono">backend/</span>, <span class="mono">npm run dev</span> at the root, sign up, open Speaking. AI replies need an Ollama endpoint in <span class="mono">backend/.env</span>; without one the backend returns safe fallbacks so the rest of the app still works.</p>
+  </div>
+  <div class="folio"><span>BrightWords · github.com/ego004/english-app</span><span>11</span></div>
+</section>
+
+<!-- ============ 08 CONVERSATIONAL ============ -->
+<section class="page">
+  <div class="eyebrow">08 · Conversational AI</div>
+  <h2>Lead capture over web, WhatsApp and voice</h2>
+  <p class="lede">Three iterations of the same business problem, an assistant that answers from a company's own content and turns conversations into qualified leads, from a managed multi-client service to a single agent graph.</p>
+  <div class="cols-3 small">
+    <div class="card">
+      <h3>LeadGenius</h3>
+      <p>A managed chatbot service for many client businesses. An admin onboards a client and crawls their site into a vector store; the widget answers with RAG and detects leads through LLM function calling.</p>
+      <p>Celery workers run email and WhatsApp follow-up sequences that pause when the lead replies; typing <i>TALK</i> hands the chat to a human. Client dashboards show leads and chat history.</p>
+      <div class="tags"><span>FastAPI</span><span>PostgreSQL</span><span>Celery · Redis</span><span>Supabase pgvector</span><span>Gemini</span></div>
+    </div>
+    <div class="card">
+      <h3>All-in-One lead platform</h3>
+      <p>One knowledge base behind a website chatbot, a WhatsApp Business bot (Twilio) and a browser voice agent built on CrewAI, with all leads and transcripts in one dashboard.</p>
+      <p>Built from a full requirements specification and design document, with tests for the API, models, services and webhooks.</p>
+      <div class="tags"><span>FastAPI</span><span>LangChain</span><span>CrewAI</span><span>Twilio</span><span>PostgreSQL</span></div>
+    </div>
+    <div class="card">
+      <h3>AutoStream agent</h3>
+      <p>A LangGraph state machine for a SaaS sales funnel: inquiry, qualification, capture. RAG over pricing and features, slot filling into a typed state, structured output for the captured lead, and session memory through a checkpointer.</p>
+      <p>Chosen over a multi-agent framework because a sales funnel needs deterministic transitions. Ships with Docker.</p>
+      <div class="tags"><span>LangGraph</span><span>Gemini 2.5 Flash</span><span>Pydantic</span><span>Docker</span></div>
+    </div>
+  </div>
+  <div class="cols" style="margin-top:7mm">
+    <div class="card small">
+      <h3>Real-time voice bot pipeline</h3>
+      <p>A WebRTC media server in Node.js with streaming voice-activity detection and barge-in: when the caller starts speaking, the bot's reply is cut off, with a 300 ms target. Raw 16-bit, 16 kHz PCM with a 10 ms heartbeat that keeps the RTP stream alive during silence. Speech recognition and synthesis are stubs, ready for any STT/TTS provider.</p>
+      <div class="tags"><span>Node.js</span><span>WebRTC (wrtc)</span><span>WebSocket</span><span>state machine</span></div>
+    </div>
+    <div class="card small">
+      <h3>Data analysis agent</h3>
+      <p>Upload a CSV and ask in plain language; the agent writes pandas and Plotly code, runs it in a restricted sandbox (allow-listed imports, time limits) and returns interactive charts, statistics and insights.</p>
+      <div class="tags"><span>FastAPI</span><span>LangChain</span><span>Gemini</span><span>pandas · SciPy · Plotly</span></div>
+    </div>
+  </div>
+  <div class="folio"><span>Conversational AI</span><span>12</span></div>
+</section>
+
+<!-- ============ 09 SMALLER ============ -->
+<section class="page">
+  <div class="eyebrow">09 · Smaller builds and experiments</div>
+  <h2>Also built</h2>
+  <div class="cols small" style="margin-top:6mm; row-gap:7mm">
+    <div class="card">
+      <h3>Reveal: anonymous messaging</h3>
+      <p>Anonymous inbox with a tiered hint system that reveals clues about the sender, ad-watch credits to unlock hints, moderation, reporting, starring and archiving, rate limiting, and a public message page per user.</p>
+      <div class="tags"><span>FastAPI</span><span>Supabase</span><span>JWT</span></div>
+    </div>
+    <div class="card">
+      <h3>SkillSwap (hackathon)</h3>
+      <p>Matches people who can teach a skill with people who want to learn it: Sentence-BERT profile embeddings, skill overlap and hour-by-hour availability overlap combined into a score with a plain-language explanation; credit transactions between users.</p>
+      <div class="tags"><span>FastAPI</span><span>Sentence-BERT</span><span>React</span><span>PostgreSQL</span></div>
+    </div>
+    <div class="card">
+      <h3>Emotion classification (GoEmotions)</h3>
+      <p>Multi-label classification of 27 emotions over 58,000 Reddit comments with a BiLSTM and self-attention.</p>
+      <div class="tags"><span>PyTorch</span><span>NLP</span></div>
+    </div>
+    <div class="card">
+      <h3>Flutter password generator · StreamPlay</h3>
+      <p>A cross-platform Flutter app for configurable strong passwords; a plug-and-play "now playing" overlay for OBS and XSplit streams.</p>
+      <div class="tags"><span>Flutter</span><span>Dart</span><span>Batch · VBScript</span></div>
+    </div>
+  </div>
+  <div style="margin-top:auto">
+    <h3>Stack</h3>
+    <p style="color:var(--ink-2)">Python, TypeScript, Swift, Dart, C/C++, SQL · FastAPI, Flask, Next.js, React, SwiftUI, Flutter · PostgreSQL, MySQL, SQLite, Supabase, Redis, Celery · PyTorch, LangChain, LangGraph, CrewAI, RAG, ChromaDB, pgvector · WebSockets, WebRTC · Docker.</p>
+  </div>
+  <div class="folio"><span>github.com/ego004</span><span>13</span></div>
+</section>
+
+</body>
+</html>
