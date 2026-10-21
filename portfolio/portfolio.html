@@ -97,7 +97,7 @@
     <div><span class="k">06</span><span>Unvelit moderation: image, video and text screening with dedup in SQL</span><span class="t">trust &amp; safety</span></div>
     <div><span class="k">07</span><span>BrightWords: AI English tutor for children, with a parent view</span><span class="t">web app + LLM</span></div>
     <div><span class="k">08</span><span>Conversational AI: lead capture over web, WhatsApp and voice</span><span class="t">RAG, agents</span></div>
-    <div><span class="k">09</span><span>Smaller builds and experiments</span><span class="t"></span></div>
+    <div><span class="k">09</span><span>Reveal, and smaller builds</span><span class="t"></span></div>
   </div>
   <div class="note">Sample people in demos are synthetic (GAN-generated faces) or fictional. Screens are from running builds.</div>
 </section>
@@ -462,14 +462,18 @@ Current scheme:
 
 <!-- ============ 09 SMALLER ============ -->
 <section class="page">
-  <div class="eyebrow">09 · Smaller builds and experiments</div>
+  <div class="eyebrow">09 · Reveal and smaller builds</div>
   <h2>Also built</h2>
-  <div class="cols small" style="margin-top:6mm; row-gap:7mm">
-    <div class="card">
-      <h3>Reveal: anonymous messaging</h3>
-      <p>Anonymous inbox with a tiered hint system that reveals clues about the sender, ad-watch credits to unlock hints, moderation, reporting, starring and archiving, rate limiting, and a public message page per user.</p>
-      <div class="tags"><span>FastAPI</span><span>Supabase</span><span>JWT</span></div>
+  <div style="display:grid; grid-template-columns: 52mm 1fr; gap:8mm; margin-top:6mm; align-items:start">
+    <figure><img src="img/reveal.jpg" style="border-radius:4mm"><figcaption>Reveal, the public message page (phone width).</figcaption></figure>
+    <div>
+      <h3>Reveal: anonymous messaging with a hint game</h3>
+      <p>Anyone with a user's link can send them an anonymous message. The sender picks how anonymous to be: Ghost (fully anonymous), Mischief (the receiver gets one free hint), Tease (the sender leaves a custom hint) or Unmasked.</p>
+      <p>The receiver unlocks tiered hints about who sent it (level 1 to 3), built from browser data captured with the message, and earns hint credits by watching ads. The inbox supports starring, archiving and reporting; messages are moderated and rate-limited.</p>
+      <div class="tags"><span>FastAPI</span><span>Supabase (Postgres)</span><span>JWT</span><span>Jinja</span><span>rate limiting</span></div>
     </div>
+  </div>
+  <div class="cols small" style="margin-top:8mm; row-gap:7mm">
     <div class="card">
       <h3>SkillSwap (hackathon)</h3>
       <p>Matches people who can teach a skill with people who want to learn it: Sentence-BERT profile embeddings, skill overlap and hour-by-hour availability overlap combined into a score with a plain-language explanation; credit transactions between users.</p>
@@ -481,9 +485,9 @@ Current scheme:
       <div class="tags"><span>PyTorch</span><span>NLP</span></div>
     </div>
     <div class="card">
-      <h3>Flutter password generator · StreamPlay</h3>
-      <p>A cross-platform Flutter app for configurable strong passwords; a plug-and-play "now playing" overlay for OBS and XSplit streams.</p>
-      <div class="tags"><span>Flutter</span><span>Dart</span><span>Batch · VBScript</span></div>
+      <h3>StreamPlay</h3>
+      <p>A plug-and-play "now playing" overlay for OBS, XSplit and Streamlabs, driven by Windows Media Player.</p>
+      <div class="tags"><span>Batch</span><span>VBScript</span></div>
     </div>
   </div>
   <div style="margin-top:auto">
