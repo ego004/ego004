@@ -86,7 +86,7 @@
   <div>
     <div class="eyebrow">Portfolio · 2026</div>
     <h1>Selected work</h1>
-    <p class="sub">Shipped cross-platform apps, real-time and location-aware systems, and applied AI. Each public project below can be shown running, from a demo path in its repository.</p>
+    <p class="sub">Shipped cross-platform apps, a live consumer product, real-time and location-aware systems, and applied AI. Each public project below can be shown running, from a demo path in its repository.</p>
   </div>
   <div class="toc">
     <div><span class="k">01</span><span>NoNonsenseMusic: native Mac, Android and Windows apps with a self-hosted server</span><span class="t">shipped, v0.3.1</span></div>
@@ -94,7 +94,7 @@
     <div><span class="k">03</span><span>Citizen complaints platform: OTP, GPS, evidence uploads, officer back office</span><span class="t">backend</span></div>
     <div><span class="k">04</span><span>SonicNet: SOS relay over a phone-to-phone mesh, with GPS and triage</span><span class="t">real-time, location</span></div>
     <div><span class="k">05</span><span>Production AI work: document extraction, agentic ETL, learning agents</span><span class="t">LLM systems</span></div>
-    <div><span class="k">06</span><span>Unvelit moderation: image, video and text screening with dedup in SQL</span><span class="t">trust &amp; safety</span></div>
+    <div><span class="k">06</span><span>Unvelit: a live anonymous college forum, and the moderation behind it</span><span class="t">live, unvelit.in</span></div>
     <div><span class="k">07</span><span>BrightWords: AI English tutor for children, with a parent view</span><span class="t">web app + LLM</span></div>
     <div><span class="k">08</span><span>Conversational AI: lead capture over web, WhatsApp and voice</span><span class="t">RAG, agents</span></div>
     <div><span class="k">09</span><span>Reveal, and smaller builds</span><span class="t"></span></div>
@@ -114,7 +114,7 @@
     <tr><td>Location on every request</td><td><b>Complaints platform</b>: GPS stored on logins, complaints and each evidence file. <b>SonicNet</b>: GPS fix and place description on each SOS, carried hop to hop.</td></tr>
     <tr><td>Live status and real-time rooms</td><td><b>NoNonsenseMusic</b>: Jams, where several devices share one queue and play in sync, with the server as the source of truth. <b>SonicNet</b>: a command centre that receives SOS calls live over WebSocket.</td></tr>
     <tr><td>Dispatch and triage console</td><td><b>SonicNet</b>: urgency from type and message, acknowledge flow, route of each call. <b>Complaints platform</b>: officer dashboard, pending queue, status changes with an audit log.</td></tr>
-    <tr><td>Reports, prescriptions, photos</td><td><b>Complaints platform</b>: image and video evidence, type and size checks, compression, per-complaint storage. <b>Unvelit</b>: automated screening of every upload.</td></tr>
+    <tr><td>Reports, prescriptions, photos</td><td><b>Complaints platform</b>: image and video evidence, type and size checks, compression, per-complaint storage. <b>Unvelit</b> (live at unvelit.in): automated screening of every upload.</td></tr>
     <tr><td>Notifications and follow-up</td><td><b>NoNonsenseMusic</b>: friend requests, shares and invites as live notifications. <b>Lead platforms</b>: email and WhatsApp follow-up sequences that pause when the person replies.</td></tr>
     <tr><td>AI assistants and triage</td><td><b>Lead platforms</b>: RAG chatbots on web and WhatsApp with human handoff. <b>Production AI</b>: source-grounded extraction from long documents. <b>BrightWords</b>: spoken-answer scoring.</td></tr>
     <tr><td>Identity and computer vision</td><td><b>Arya</b>: face detection, embeddings and matching across cameras, sized for a 300,000-person event.</td></tr>
@@ -353,9 +353,9 @@
 
 <!-- ============ 06 UNVELIT ============ -->
 <section class="page">
-  <div class="eyebrow">06 · Trust and safety</div>
-  <h2>Unvelit moderation service</h2>
-  <p class="lede">Every image, video and text post on Unvelit, an anonymous college forum, passes through this API before anyone sees it. Paid moderation costs money per call, so a repost of something already moderated is recognised and its verdict reused.</p>
+  <div class="eyebrow">06 · Live product · unvelit.in</div>
+  <h2>Unvelit: an anonymous college forum</h2>
+  <p class="lede">Unvelit (<b>unvelit.in</b>) is an anonymous forum for college students, built and run by our team. Anonymous posting with image and video uploads is a risky combination, so every post passes through our own moderation service before anyone sees it. Paid moderation costs money per call, so a repost of something already moderated is recognised and its verdict reused.</p>
   <div class="tags"><span>FastAPI</span><span>MySQL</span><span>perceptual hashing</span><span>SightEngine</span><span>Gemini</span><span>OpenCV</span></div>
   <div class="cols">
     <div>
@@ -394,9 +394,9 @@ Current scheme:
   </div>
   <div class="demo">
     <div class="eyebrow">Demo path</div>
-    <p>MySQL, then <span class="mono">python demo/dedup_demo.py</span>: no API keys needed (output above). With SightEngine and Gemini keys, <span class="mono">uvicorn api:app</span> serves the full moderation API.</p>
+    <p>The product: <b>unvelit.in</b>. The moderation engine on its own: MySQL, then <span class="mono">python demo/dedup_demo.py</span>, with no API keys needed (output above). With SightEngine and Gemini keys, <span class="mono">uvicorn api:app</span> serves the full moderation API.</p>
   </div>
-  <div class="folio"><span>Unvelit moderation · github.com/ego004/unvelit_moderation</span><span>10</span></div>
+  <div class="folio"><span>Unvelit · unvelit.in · moderation: github.com/ego004/unvelit_moderation</span><span>10</span></div>
 </section>
 
 <!-- ============ 07 BRIGHTWORDS ============ -->
